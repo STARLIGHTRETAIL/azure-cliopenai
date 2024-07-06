@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  testwebapp:
+    image: testwebapp
+    build:
+      context: src/azure-cli/azure/cli/command_modules/appservice/sample-repo-for-deployment-test
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
